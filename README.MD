@@ -1,4 +1,12 @@
 This project is about reading streaming data and perform analysis
+
+The versions of Tech used:
+- spark=3.2.2
+- kafka=3.2.1
+- tweepy=3.10.0
+- pyspark=2.4.6
+
+
 1. Netcat utility to run to enter data
     nc -lc <<port>>
 2. spark-submit StreamProcess.py <<host>> <<port>>
