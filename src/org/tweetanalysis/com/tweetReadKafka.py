@@ -1,7 +1,8 @@
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
-from kafka import SimpleProducer, KafkaClient
+from kafka import KafkaClient
+from kafka.producer import SimpleProducer
 import tweetUtilites as TU
 
 class StdOutListener(StreamListener):

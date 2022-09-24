@@ -5,6 +5,7 @@ The versions of Tech used:
 - kafka=3.2.1
 - tweepy=3.10.0
 - pyspark=2.4.6
+- kafka-python=2.0.2
 
 
 1. Netcat utility to run to enter data
