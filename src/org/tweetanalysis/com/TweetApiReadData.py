@@ -32,7 +32,7 @@ class TweetsListener(object):
 
 if __name__ == "__main__":
 
-    myapi = readinifile('key_pass')
+    myapi = readinifile('twitter')
     auth = OAuthHandler(myapi['api_key'], myapi['api_secret_key'])
     auth.set_access_token(myapi['access_token'], myapi['access_token_secret'])
 

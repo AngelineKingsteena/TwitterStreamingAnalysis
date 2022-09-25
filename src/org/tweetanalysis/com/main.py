@@ -9,8 +9,8 @@ import tweetUtilites as TU
 
 
 if __name__ == "__main__":
-    api=TU.readinifile("key_pass")
-    tcp=TU.readinifile("tcp_key")
+    api=TU.readinifile("twitter")
+    # tcp=TU.readinifile("tcp_key")
     #print(api)
     conn = None
     ''' This is TCP connection setting to write message'''

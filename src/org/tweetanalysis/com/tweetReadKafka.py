@@ -2,7 +2,7 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 from kafka import KafkaClient
-from kafka.producer import SimpleProducer
+from kafka import KafkaProducer
 import tweetUtilites as TU
 
 class StdOutListener(StreamListener):
@@ -13,9 +13,9 @@ class StdOutListener(StreamListener):
     def on_error(self, status):
         print (status)
 
-api=TU.readinifile("key_pass")
+api=TU.readinifile("twitter")
 kafka = KafkaClient("localhost:9092")
-producer = SimpleProducer(kafka)
+producer = KafkaProducer(kafka)
 l = StdOutListener()
 auth = TU.get_tweets(api)
 stream = Stream(auth, l)

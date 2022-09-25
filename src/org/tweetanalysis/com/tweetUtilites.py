@@ -97,6 +97,7 @@ def send_tweet_spark_kafka(resp):
             #     tweet_text = full_tweet['full_text']
             #     print(type(tweet_text))
             # else:
+            # print(full_tweet.items())
             tweet_text = full_tweet['text']
             # kafka_producer.send('tweetData', value = tweet_text)
             publish_message(kafka_producer, 'tweetData', 'raw', tweet_text)
@@ -114,7 +115,8 @@ def send_tweet_spark_kafka(resp):
 def readinifile(keypass):
     keydetail= {}
     configKey = ConfigParser()
-    configKey.read('/Laxman/Project/Python/TweetStreamingAnalysis/src/resource/configfile.ini')
+    configKey.read(r'C:\Users\000PMD744\My Drive (notesraju@gmail.com)\data_science_projects\projects\TweetStreamingAnalysis\secrets.conf')
+
     for name, value in configKey.items(keypass):
         keydetail[name] = value
     return keydetail
